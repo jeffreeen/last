@@ -1,0 +1,20 @@
+.modalform {
+  display: none;
+}
+
+.error-modal {
+  color: red;
+}
+
+.modalform__container {
+  background: #fff;
+  padding: 35px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalform__content {
+  margin-bottom: 15px;
+  color: #000;
+}

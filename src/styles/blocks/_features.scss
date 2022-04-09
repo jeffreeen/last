@@ -1,0 +1,16 @@
+.features {
+  display: flex;
+  padding-top: rem(16px);
+
+  @include tablets() {
+    display: none;
+  }
+}
+
+.features__item {
+  margin-right: 0.3rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.colors {
+  background: url(./images/menubg.png) center center/cover no-repeat;
+  position: relative;
+
+  .title {
+    position: absolute;
+    left: rem(85px);
+    top: rem(115px);
+
+    @include tablets() {
+      left: rem(10px);
+      top: rem(76px);
+    }
+
+    @include phones() {
+      left: rem(10px);
+      top: rem(76px);
+    }
+  }
+}
+

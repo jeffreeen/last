@@ -1,0 +1,156 @@
+.team {
+  @include tablets() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+.team__list {
+  padding-top: rem(53px);
+  padding-bottom: rem(53px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+
+  @include tablets() {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include tablets() {
+      display: flex;
+    }
+  }
+
+  &--desctop {
+    @include tablets() {
+      display: none;
+    }
+  }
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: rem(220px);
+  min-height: rem(420px);
+  margin-right: rem(20px);
+  flex: 1;
+
+  @include tablets() {
+    margin-right: 0;
+    min-height: 100%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team__photo {
+  @include tablets() {
+
+  }
+}
+
+.team__data {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem(25px);
+  position: relative;
+}
+
+.team__button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team__button-icon {
+  align-self: flex-start;
+}
+
+.team__name {
+  margin-right: rem(4px);
+  font-family: "play";
+  font-weight: bold;
+  font-size: rem(18px);
+  line-height: rem(21px);
+  color: $black;
+}
+
+.team__svg {
+  width: rem(9px);
+  height: rem(9px);
+  color: $red;
+  transition: transform .3s;
+
+  @include tablets() {
+    color: $black;
+  }
+}
+
+.team__svg--active {
+  transform: rotate(180deg);
+}
+
+.team__desc-wrapper {
+  overflow: hidden;
+  height: 0;
+  top: 100%;
+  transition: height .3s;
+  position: absolute;
+
+  @include tablets() {
+    position: relative;
+  }
+}
+
+.team__desc {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "play";
+  line-height: rem(18px);
+  padding-top: rem(11px);
+  padding-left: rem(1px);
+  padding-right: rem(1px);
+
+  @include tablets() {
+    height: rem(410px);
+  }
+}
+
+.team__position {
+  color: $black;
+  margin-bottom: rem(4px);
+
+  @include tablets() {
+    margin-top: rem(21px);
+    margin-bottom: rem(5px);
+  }
+}
+
+.team__text {
+  text-align: center;
+  max-height: 150px;
+
+  @include phones() {
+   max-width: 329px;
+  }
+}
+

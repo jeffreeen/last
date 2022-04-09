@@ -1,0 +1,54 @@
+$containerWidth: 915px;
+$baseFontSize: 16px;
+
+//colors
+$grey: #F5F5F5;
+$white: #ffffff;
+$black: #292929;
+$red: #E01F3D;
+@import "_media.scss";
+
+//z-index
+
+$z-index-fixed-menu: 100;
+
+//normalize
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"; 
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Open+Sans:wght@300;400;600;700&family=Play:wght@400;700&display=swap');
+@import "_layout";
+
+//blocks
+@import "./blocks/*.scss";
+// @import "blocks/_welcome";
+// @import "blocks/_header";
+// @import "blocks/_contacts";
+// @import "blocks/_gamburger";
+// @import "blocks/_features";
+// @import "blocks/_feature";
+// @import "blocks/_section";
+// @import "blocks/_headline";
+// @import "blocks/_benefits";
+// @import "blocks/_benefit";
+// @import "blocks/_reviews";
+// @import "blocks/_interactive-avatar";
+// @import "blocks/_form";
+// @import "blocks/_radio";
+// @import "blocks/_fixed-menu";
+// @import "blocks/_footer";
+// @import "blocks/_socials";
+// @import "blocks/_map";
+// @import "blocks/_blackout";
+// @import "blocks/_modalmenu";
+// @import "blocks/_products";
+// @import "blocks/_colors";
+// @import "blocks/_slider";
+// @import "blocks/_dropdown";
+// @import "blocks/_team";
+// @import "blocks/_modalform";
+// @import "blocks/_video";
+// @import "blocks/_product-menu";
+
+

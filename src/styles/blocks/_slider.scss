@@ -1,0 +1,96 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+
+  @include tablets() {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+}
+
+.slider__button-left {
+  position: absolute;
+  left: 0;
+  z-index: 110;
+
+  @include tablets() {
+    left: 10%;
+  }
+
+  @include phones() {
+    left: 2%;
+  }
+}
+
+.slider__button-right {
+  position: absolute;
+  right: 0;
+  z-index: 110;
+
+  @include tablets() {
+    right: 10%;
+  }
+
+  @include phones() {
+    right: 2%;
+  }
+}
+
+
+.slider__icon-left {
+  width: rem(13.5px);
+  height: rem(27px);
+
+  @include tablets() {
+  position: absolute;
+  top: rem(146px);
+  left: 10%;
+  }
+
+  @include phones() {
+    left: 1%;
+  }
+}
+
+.slider__icon-right {
+  width: rem(13.5px);
+  height: rem(27px);
+  transform: rotate(180deg);
+
+  @include tablets() {
+    position: absolute;
+    top: rem(146px);
+    right: 10%;
+  }
+
+  @include phones() {
+    right: 1%;
+  }
+}
+
+.slider__list {
+  display: flex;
+  align-items: center;
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F8FAF9;
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  @include tablets() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+}

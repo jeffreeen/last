@@ -1,0 +1,67 @@
+.dropdown {
+  @include tablets() {
+    display: none;
+   
+  }
+}
+
+.dropdown__features {
+  width: rem(91px);
+  height: rem(91px);
+  background: #9A9A9A;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover .dropdown__menu {
+    left: rem(91px);
+    opacity: 1;
+  }
+}
+
+.dropdown__gear {
+  width: rem(42px);
+  height: rem(42px);
+}
+
+.dropdown__icon {
+  width: rem(24px);
+  height: rem(24px);
+  margin-right: rem(18px);
+}
+
+.dropdown__menu {
+  width: rem(273px);
+  overflow: hidden;
+  position: absolute;
+  background: #d6d6d6;
+  border-radius: 4px;
+  top: 0;
+  padding: rem(28px);
+  font-family: "play";
+  left: -9999px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.dropdown__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(28px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dropdown__text {
+  flex: 1;
+  text-align: left;
+}
+
+.dropdown__value {
+  text-align: right;
+}

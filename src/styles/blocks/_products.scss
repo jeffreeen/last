@@ -1,0 +1,160 @@
+.products {
+  background: #F8FAF9;
+  color: $black;
+  font-family: "play";
+  position: relative;
+
+  &::before {
+    content: url(./images/decorproducts.png);
+    position: absolute;
+    bottom: -1.2rem;
+    right: 12%;
+  }
+}
+
+.products__container {
+  max-width: rem(979px);
+}
+
+.products__slider {
+  position: relative;
+
+  .bx-wrapper {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+}
+
+.products__picture {
+  @include tablets() {
+  display: flex;
+  justify-content: center;
+  }
+}
+
+.products__img {
+  width: 90%;
+  height: 90%;
+  margin-left: rem(33px);
+  margin-right: rem(55px);
+  padding-top: rem(34px);
+
+  @include tablets() {
+    width: 55%;
+    height: 55%;
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+   
+  }
+}
+
+.products__content {
+  @include tablets() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.products__title {
+  font-size: rem(36px);
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: rem(419px);
+  margin-top: rem(25px);
+  margin-bottom: rem(25px);
+  line-height: rem(41px);
+  padding-right: rem(-18px);
+
+  @include tablets() {
+    max-width: rem(598px);
+    text-align: center;
+    font-size: rem(28px);
+  }
+}
+
+.products__wrapper-desc {
+  max-width: rem(368px);
+
+  @include tablets() {
+    max-width: rem(614px);
+  }
+}
+
+.products__desc {
+  color: #666666;
+  margin-bottom: rem(27px);
+  line-height: rem(18.5px);
+
+  @include tablets() {
+    text-align: center;
+   
+  }
+}
+
+.products__parameters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(25px);
+
+  @include tablets() {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.products__charge {
+  margin-right: rem(86px);
+}
+
+.products__charge-title , .products__weight-title  {
+  color: #666666;
+}
+
+.products__weight {
+  flex: 1;
+
+  @include tablets() {
+    flex: none;
+  }
+}
+
+.products__value {
+  font-size: rem(18px);
+  font-weight: bold;
+}
+
+.products__footer {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablets() {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.products__costs {
+  font-size: rem(36px);
+  margin-right: rem(13px);
+
+  @include tablets() {
+    font-size: rem(40px);
+  }
+}
+
+.products__footer .btn {
+  flex: 1;
+
+  @include tablets() {
+    flex: none;
+  }
+}
+

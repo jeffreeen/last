@@ -1,0 +1,45 @@
+.modalmenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #313131;
+  font-size: rem(36px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10000;
+  overflow: hidden;
+  font-style: "play";
+  display: none;
+}
+
+.modalmenu-on {
+  display: flex;
+}
+
+.modalmenu__btn {
+  background: transparent;
+  border: none;
+  align-self: flex-end;
+  position: absolute;
+  top: rem(42px);
+  right: rem(42px);
+  padding: 0;
+  margin: 0;
+}
+
+.modalmenu__icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.modalmenu__link {
+  text-decoration: none;
+}

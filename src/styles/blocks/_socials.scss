@@ -1,0 +1,49 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials__item {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: relative;
+  margin-right: 0.625rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.vk, .fb, .in, .tv {
+  width: 30px;
+  height: 30px;
+  color: #B3B3B3;
+
+  @include tablets() {
+    width: rem(32px);
+    height: rem(32px);
+  }
+
+  @include phones() {
+    width: rem(24px);
+    height: rem(24px);
+  }
+
+  &:hover {
+    color:#000000;
+    transition: 0.3s;
+
+    @include phones() {
+
+    }
+  }
+}

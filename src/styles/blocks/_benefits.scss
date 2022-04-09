@@ -1,0 +1,56 @@
+.benefits {
+  position: relative;
+
+  &::before {
+    content: url(./images/decorwhy.png);
+    position: absolute;
+    bottom: -1.875rem;
+    left: 22%;
+    z-index: 110;
+  }
+}
+
+.benefits__list {
+  display: flex;
+
+  @include phones() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 4%;
+  position: relative;
+
+  @include phones() {
+    padding: 0;
+    margin-bottom: rem(31px);
+  }
+
+  &::before {
+    content: url("./images/separator.png");
+    position: absolute;
+    top: 3.125rem;
+    right: 0;
+    transform: translate(50%);
+
+    @include phones() {
+      content: "";
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

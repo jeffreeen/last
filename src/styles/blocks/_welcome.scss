@@ -1,0 +1,110 @@
+.welcome {
+  background-color: $grey;
+  height: 100vh;
+  min-height: 40.625rem;
+  color: $black;
+  position: relative;
+
+  @include tablets() {
+    height: 100%;
+  }
+
+  &::before {
+    content: url(./images/Rectangle14.png);
+    position: absolute;
+    bottom: -1.875rem;
+    right: 18%;
+
+    @include phones() {
+      display: none;
+    }
+  }
+} 
+
+.welcome__container {
+  display: flex;
+  background: url(./images/beats.png) right center / 50% auto no-repeat;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 4.375rem;
+  
+
+  @include tablets() {
+    background: none;
+  }
+}
+
+.welcome__title {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: rem(60px);
+
+  @include tablets() {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+
+    &:before {
+      content: url(./images/beatstablets.png);
+      margin-bottom: rem(14px);
+
+      @include tablets() {
+        margin-bottom: rem(10px);
+      }
+
+      @include phones() {
+        margin-bottom: rem(8px);
+      }
+    }
+  }
+  @include phones() {
+    padding-top: 0;
+  }
+}
+
+.welcome__title .title {
+  text-align: left;
+
+  @include tablets() {
+    text-align: center;
+    padding: 0 3%;
+  }
+
+  @include phones() {
+    font-size: rem(32px);
+    line-height: rem(36px);
+    padding: 0 15%;
+  }
+}
+
+.welcome__desc {
+  font-size: 1.313rem;
+  line-height: 1.563rem;
+  margin-bottom: 2.2rem;
+  margin-top: 1.375rem;
+  padding-right: 20%;
+  font-family: "play";
+
+  @include tablets() {
+    text-align: center;
+    padding: 0 18%;
+    margin-bottom: rem(10px);
+    margin-top: rem(5px);
+  }
+
+  @include phones() {
+    margin-top: rem(14px);
+    padding: 0 12%;
+    font-size: rem(18px);
+    line-height: rem(20px);
+  }
+}

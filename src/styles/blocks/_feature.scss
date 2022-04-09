@@ -1,0 +1,15 @@
+.feature {
+  display: flex;
+  font-family: "play";
+  align-items: center;
+
+  &__text {
+    min-width: 7.125rem;
+    line-height: 1.2;
+  }
+}
+
+.feature__main {
+  width: 2.813rem;
+  margin-right: rem(9px);
+}
