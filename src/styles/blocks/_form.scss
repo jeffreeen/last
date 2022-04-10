@@ -1,12 +1,13 @@
 .form {
   background: #181818;
-  color: $white;
+  color: white;
 }
 
 .form__content {
   display: flex;
   font-family: "play";
   margin-top: 3.75rem;
+  color: white;
 
   @include tablets() {
     flex-direction: column;

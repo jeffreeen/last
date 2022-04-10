@@ -42,6 +42,9 @@
   "homepage": "https://github.com/jeffreeen/beatshomeworks#readme",
   "description": "",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bxslider": "^4.2.14",
+    "dart-sass": "^1.25.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }

@@ -6,7 +6,7 @@ $grey: #F5F5F5;
 $white: #ffffff;
 $black: #292929;
 $red: #E01F3D;
-@import "_media.scss";
+@import "./media";
 
 //z-index
 
@@ -18,7 +18,7 @@ $z-index-fixed-menu: 100;
 //setups
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Open+Sans:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Open+Sans:wght@300;400;600;700&family=Play:wght@400;700&display=swap');
-@import "_layout";
+@import "./layout";
 
 //blocks
 @import "./blocks/*.scss";

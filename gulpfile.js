@@ -1,6 +1,6 @@
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require( 'gulp-rm' );
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('dart-sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -14,7 +14,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
-const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
+const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS} = require("./gulp.config");
 const gulpif = require('gulp-if');
 
 const env = process.env.NODE_ENV;
@@ -41,11 +41,11 @@ task("copy:img", () => {
   .pipe(reload({stream: true}));
 });
 
-task("copy:jq", () => {
-  return src(`${SRC_PATH}/scripts/jquery-3.6.0.min.js`)
-  .pipe(dest(`${DIST_PATH}/scripts`))
-  .pipe(reload({stream: true}));
-});
+// task("copy:jq", () => {
+//   return src(`${SRC_PATH}/scripts/jquery-3.6.0.min.js`)
+//   .pipe(dest(`${DIST_PATH}/scripts`))
+//   .pipe(reload({stream: true}));
+// });
 
 task("copy:video", () => {
   return src(`${SRC_PATH}/video/*.mp4`)
@@ -74,7 +74,7 @@ task("styles", () => {
 });
 
 task('scripts', () => {
-  return src(['src/scripts/*.js'])
+  return src([...JS_LIBS, 'src/scripts/*.js'])
   .pipe(gulpif(env === 'dev', sourcemaps.init()))
   .pipe(concat('main.min.js', {newLine: ';'}))
   .pipe(gulpif(env === 'prod', babel({
@@ -120,7 +120,6 @@ task('watch', () => {
   watch('./src/*.html', series('copy:html'));
   watch('./src/*.svg', series('copy:sprite'));
   watch('./src/images/*.png', series('copy:img'));
-  watch('./src/scripts/jquery-3.6.0.min.js', series('copy:jq'));
   watch('./src/video/*.mp4', series('copy:video'));
   watch('./src/scripts/*.js', series('scripts'));
   watch('./src/images/icons/*.svg', series('icons'));
@@ -130,13 +129,13 @@ task('watch', () => {
 
 task("default", series(
   "clean",
-   parallel("copy:html", "copy:sprite", "copy:jq", "copy:video", "copy:img", "styles", "scripts", "icons"),
+   parallel("copy:html", "copy:sprite", "copy:video", "copy:img", "styles", "scripts", "icons"),
    parallel("watch", "server")
 )
 );
 
 task("build", series(
   "clean",
-   parallel("copy:html", "copy:sprite", "copy:jq", "copy:video", "copy:img", "styles", "scripts", "icons"))
+   parallel("copy:html", "copy:sprite", "copy:video", "copy:img", "styles", "scripts", "icons"))
 );
 

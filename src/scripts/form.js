@@ -2,14 +2,14 @@
 const validateFields = (form, fieldsArray) => {
     fieldsArray.forEach(field => {
       field.removeClass("input-error");
-      if (field.val().trim() === "") {
+      if (field.val().trim() == "") {
         field.addClass("input-error");
       } 
     })
   
     const errorFields = form.find(".input-error");
   
-    return errorFields.length===0;
+    return errorFields.length==0;
   }
   
   
